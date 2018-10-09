@@ -1,0 +1,96 @@
+
+/* .......................Navbar...................... */
+
+.navbar {
+    display: flex;
+    max-width: 1140px;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #777;
+    
+}
+
+.navbar {
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.brand, .nav-tribar {
+    text-transform: uppercase;
+    color: #303137;
+}
+.topnav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 20px;
+}
+.topnav .nav-tribar {
+    text-decoration: none;
+    padding-left: 20px;
+}
+span.sensei {
+    color: #66B6D3;
+}
+
+.brand {
+    font-size: 25px;
+}
+
+.dropdownLink {
+    display: none;
+}
+.hamburger {
+    text-decoration: none;
+    color: #303137;
+}
+.hamburger:hover {
+    color: #303137;
+    text-decoration: none;
+}
+#navbar-toggle > li:nth-child(4) {
+    padding-right: 30px;
+}
+
+/*................... Mobile .....................*/
+
+@media (max-width: 768px) {
+    ul.topnav li a.nav-tribar {
+        display: none;
+    }
+
+    ul.topnav li.dropdownLink {
+        display: block;
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+
+    ul.topnav.responsive {
+        flex-direction: column;
+        text-align: right;
+        margin-bottom: 1rem;
+    }
+
+    ul.topnav.responsive li a.nav-tribar {
+        display: block;
+        line-height: 2;
+    }
+
+    ul.topnav.responsive li {
+        position: relative;
+        top: 30px;
+        right: 30px;
+    }
+
+    #navbar-toggle > li:nth-child(4) {
+        padding-right: 0px;
+    }
+
+    ul.topnav.responsive li.dropdownLink {
+        position: absolute;
+        top: 15px;
+        right: 20px;
+    }
+}
