@@ -5,7 +5,7 @@ class About extends React.Component {
     render() { return (
         <>
             <Navbar />
-            <div className="container">About</div>
+            <div className="container content-container">About</div>
         </>
     );}
 }

@@ -5,7 +5,7 @@ class Contact extends React.Component {
     render() { return (
         <>
             <Navbar />
-            <div className="container">Contact</div>
+            <div className="container content-container">Contact</div>
         </>
     );}
 }

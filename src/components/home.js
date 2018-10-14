@@ -5,7 +5,7 @@ class Home extends React.Component {
     render() { return (
         <>
             <Navbar />
-            <div className="container">
+            <div className="container content-container">
                 <div className="row">
                     <div className="col-sm">
                     One of three columns
