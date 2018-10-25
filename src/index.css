@@ -20,7 +20,7 @@ body {
 
 .content-container {
   margin-top: 100px;
-  margin-bottom: 300px;
+  margin-bottom: 100px;
 }
 
 .navbar {
@@ -54,6 +54,10 @@ code {
 
 a {
   color: #008ed6 !important;
+}
+
+.page-footer {
+  border-top: #008ed6 1px solid;
 }
 
 
