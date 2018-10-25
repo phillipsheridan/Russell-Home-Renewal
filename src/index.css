@@ -20,6 +20,7 @@ body {
 
 .content-container {
   margin-top: 100px;
+  margin-bottom: 300px;
 }
 
 .navbar {
@@ -41,6 +42,14 @@ code {
 
 .m0auto {
   margin: 0 auto;
+}
+
+
+.header {
+  background: #000000 url(./assets/img/header-img.jpeg) 100% 100% no-repeat;
+  height: 400px;
+  background-position: center;
+
 }
 
 

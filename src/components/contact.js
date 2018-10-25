@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "./navbar";
+import Footer from "./footer";
 
 class Contact extends React.Component {
   render() {
@@ -60,7 +61,7 @@ class Contact extends React.Component {
               <p className="lead">example@gmail.com</p>
               <p className="lead">123 Main Street Anywhere, CA 12345</p>
               <hr className="my-4" />
-              <p className="lead">
+              <p className="lead text-center">
                 <a
                   className="btn btn-primary btn-lg"
                   href="tel:1-123-444-4567"
@@ -72,6 +73,7 @@ class Contact extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }

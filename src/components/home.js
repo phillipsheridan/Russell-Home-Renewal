@@ -1,11 +1,14 @@
 import React from "react";
 import Navbar from "./navbar";
+import Header from "./header";
+import Footer from "./footer";
 
 class Home extends React.Component {
   render() {
     return (
       <>
         <Navbar />
+        <Header />
         <div className="container content-container">
           <div className="row">
             <div className="col-sm py-2">
@@ -36,6 +39,7 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
+        <Footer />
       </>
     );
   }
