@@ -6,7 +6,6 @@ class Contact extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
         <div className="container content-container">
           <div className="row">
             <div className="col-lg-6">
@@ -73,7 +72,6 @@ class Contact extends React.Component {
             </div>
           </div>
         </div>
-        <Footer />
       </>
     );
   }

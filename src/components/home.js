@@ -7,7 +7,6 @@ class Home extends React.Component {
   render() {
     return (
       <>
-        <Navbar />
         <Header />
         <div className="container content-container">
           <div className="row">
@@ -39,7 +38,6 @@ class Home extends React.Component {
             </div>
           </div>
         </div>
-        <Footer />
       </>
     );
   }

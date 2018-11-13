@@ -3,23 +3,28 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import * as serviceWorker from "./serviceWorker";
 import Navbar from "./components/navbar";
+import Header from "./components/footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
 import ScrollToTop from "./components/scrollToTop";
+import Footer from "./components/footer";
 
 ReactDOM.render(
   <BrowserRouter>
-    <ScrollToTop>
-      <Switch>
-        <Route path="/about" component={About} />
-        <Route path="/contact" component={Contact} />
-        <Route path="/" component={Home} />
-      </Switch>
-    </ScrollToTop>
+    <div>
+      <Navbar />
+      <ScrollToTop>
+        <Switch>
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/" component={Home} />
+        </Switch>
+      </ScrollToTop>
+      <Footer />
+    </div>
   </BrowserRouter>,
-
   document.getElementById("root")
 );
 
