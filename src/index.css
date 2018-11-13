@@ -25,7 +25,6 @@ body {
 
 .navbar {
   border-bottom: #008ed6 3px solid;
-  opacity: 0.8;
 }
 
 .navbar-toggler-icon {
@@ -52,7 +51,7 @@ a {
 }
 
 .page-footer {
-  border-top: #008ed6 1px solid;
+  border-top: #008ed6 3px solid;
 }
 
 .footer {

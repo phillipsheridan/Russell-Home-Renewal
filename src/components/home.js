@@ -4,6 +4,10 @@ import Header from "./header";
 import Footer from "./footer";
 
 class Home extends React.Component {
+  componentDidMount() {
+    // console.log("HOME mounted!");
+    document.getElementById("root").scrollTo(0, 0);
+  }
   render() {
     return (
       <>

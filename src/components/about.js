@@ -3,6 +3,10 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 
 class About extends React.Component {
+  componentDidMount() {
+    // console.log("GALLERY mounted!");
+    document.getElementById("root").scrollTo(0, 0);
+  }
   render() {
     return (
       <>

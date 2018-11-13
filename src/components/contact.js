@@ -3,6 +3,10 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 
 class Contact extends React.Component {
+  componentDidMount() {
+    // console.log("CONTACT mounted!");
+    document.getElementById("root").scrollTo(0, 0);
+  }
   render() {
     return (
       <>

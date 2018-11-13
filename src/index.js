@@ -8,20 +8,17 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
 import About from "./components/about";
 import Contact from "./components/contact";
-import ScrollToTop from "./components/scrollToTop";
 import Footer from "./components/footer";
 
 ReactDOM.render(
   <BrowserRouter>
     <div>
       <Navbar />
-      <ScrollToTop>
-        <Switch>
-          <Route path="/about" component={About} />
-          <Route path="/contact" component={Contact} />
-          <Route path="/" component={Home} />
-        </Switch>
-      </ScrollToTop>
+      <Switch>
+        <Route path="/about" component={About} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/" component={Home} />
+      </Switch>
       <Footer />
     </div>
   </BrowserRouter>,
