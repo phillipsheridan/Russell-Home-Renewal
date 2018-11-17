@@ -20,7 +20,7 @@ body {
 
 .content-container {
   margin-top: 100px;
-  margin-bottom: 100px;
+  margin-bottom: 200px;
 }
 
 .navbar {
@@ -41,7 +41,7 @@ code {
 }
 
 .header {
-  background: #000000 url(./assets/img/header-img.jpeg) 100% 100% no-repeat;
+  background: #000000 url(../img/header-img.jpeg) 100% 100% no-repeat;
   height: 400px;
   background-position: center;
 }
@@ -52,9 +52,16 @@ a {
 
 .page-footer {
   border-top: #008ed6 3px solid;
+  background-color: #343a40;
+}
+
+footer {
+  bottom: 0;
+  width: 100%;
 }
 
 .footer {
+  height: 100px;
   max-width: 80% !important;
   margin: 0 auto;
 }
@@ -64,3 +71,23 @@ a {
 /* .home {
   height: 100%;
 } */
+
+.nav-link {
+  text-transform: uppercase;
+}
+
+.photoView {
+  width: 100%;
+  height: 800px;
+  max-height: 800px;
+  text-align: center;
+}
+
+.photoViewImg {
+  max-width: 100%;
+  max-height: 800px;
+}
+
+.home-text hr {
+  background-color: #fff;
+}

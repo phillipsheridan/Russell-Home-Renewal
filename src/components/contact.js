@@ -7,6 +7,9 @@ class Contact extends React.Component {
     // console.log("CONTACT mounted!");
     document.getElementById("root").scrollTo(0, 0);
   }
+  onFormSubmit(ev) {
+    ev.preventDefault();
+  }
   render() {
     return (
       <>
@@ -20,7 +23,7 @@ class Contact extends React.Component {
                     Please fill out this form and we will get back to you as
                     soon as possible.
                   </p>
-                  <form action="">
+                  <form onSubmit={this.onFormSubmit}>
                     <div className="form-group">
                       <input
                         type="text"
@@ -43,10 +46,17 @@ class Contact extends React.Component {
                       />
                     </div>
                     <div className="form-group">
+                      <input
+                        type="text"
+                        className="form-control form-control-lg"
+                        placeholder="Type of Project"
+                      />
+                    </div>
+                    <div className="form-group">
                       <textarea
                         type="text"
                         className="form-control form-control-lg"
-                        placeholder="Subject"
+                        placeholder="Comments"
                         rows="5"
                       />
                     </div>
@@ -61,13 +71,25 @@ class Contact extends React.Component {
             </div>
             <div className="jumbotron my-5 bg-dark m0auto">
               <h5 className="display-4">Contact Us</h5>
-              <p className="lead">example@gmail.com</p>
-              <p className="lead">123 Main Street Anywhere, CA 12345</p>
+              <hr className="my-4" />
+              <p className="text-center">Email: russellhomerenewal@gmail.com</p>
+              <hr className="my-4" />
+              <p className="text-center">Phone: 912-433-6720</p>
               <hr className="my-4" />
               <p className="lead text-center">
                 <a
                   className="btn btn-primary btn-lg"
-                  href="tel:1-123-444-4567"
+                  href="mailto:russellhomerenewal@gmail.com"
+                  role="button"
+                >
+                  Email now
+                </a>
+              </p>
+              <hr className="my-4" />
+              <p className="lead text-center">
+                <a
+                  className="btn btn-primary btn-lg"
+                  href="tel:1-912-433-6720"
                   role="button"
                 >
                   Call now

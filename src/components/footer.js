@@ -8,17 +8,17 @@ class Footer extends React.Component {
         <div className="footer">
           <div className="d-flex justify-content-between pt-5 mb-3 space-evenly">
             <div className="flex-item">
-              <h6 className="text-uppercase font-weight-bold">
+              <h6 className="text-uppercase">
                 <Link to="/">Home</Link>
               </h6>
             </div>
             <div className="flex-item">
-              <h6 className="text-uppercase font-weight-bold">
+              <h6 className="text-uppercase">
                 <Link to="/about">Gallery</Link>
               </h6>
             </div>
             <div className="flex-item">
-              <h6 className="text-uppercase font-weight-bold">
+              <h6 className="text-uppercase">
                 <Link to="/contact">Contact</Link>
               </h6>
             </div>

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "107Closet",
+    "before": "../img/107 Closet Before.JPG",
+    "after": "../img/107 Closet After.JPG"
+  },
+  {
+    "id": "DuffyBathroom",
+    "before": "DuffyBathroomBefore",
+    "after": "DuffyBathroomAfter"
+  },
+  {
+    "id": "Duffy Bedroom",
+    "before": "DuffyBedroomBefore",
+    "after": "DuffyBedroomAfter"
+  },
+  {
+    "id": "DuffyHandrail",
+    "before": "DuffyHandrailBefore",
+    "after": "DuffyHandrailAfter"
+  },
+  {
+    "id": "DuffyFireplace",
+    "before": "DuffyFireplaceBefore",
+    "after": "DuffyFireplaceAfter"
+  },
+  { "id": "Waldburg", "before": null, "after": "WaldburgDeckAfter" }
+]
