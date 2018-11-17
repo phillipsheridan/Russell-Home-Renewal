@@ -11,11 +11,12 @@ class About extends React.Component {
   render() {
     return (
       <>
-        <div className="container content-container">
-          <h1 className="m-5">
-            Below are some recent completed projects, if the image has a
+        <div className="container content-container text-center">
+          <h1 className="m-5">Gallery</h1>
+          <p>
+            Below are some recently completed projects, if the image has a
             before/after, you can toggle to see each.
-          </h1>
+          </p>
 
           <PhotoViewer />
         </div>

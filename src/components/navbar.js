@@ -13,7 +13,7 @@ class Navbar extends Component {
         <div className="container">
           <div className="navbar-brand">
             {/* RHR */}
-            <img height="100px" src={logo} alt="Russell Home Renewal logo" />
+            <img height="75px" src={logo} alt="Russell Home Renewal logo" />
           </div>
           <button
             className="navbar-toggler"

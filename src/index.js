@@ -12,7 +12,7 @@ import Footer from "./components/footer";
 
 ReactDOM.render(
   <BrowserRouter>
-    <div>
+    <>
       <Navbar />
       <Switch>
         <Route path="/about" component={About} />
@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route path="/" component={Home} />
       </Switch>
       <Footer />
-    </div>
+    </>
   </BrowserRouter>,
   document.getElementById("root")
 );

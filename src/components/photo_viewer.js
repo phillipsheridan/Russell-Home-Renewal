@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import panels from "../assets/js/panels";
 
-import imageMap from "../assets/json/imageMap.json";
-
 class PhotoViewer extends Component {
   constructor(props) {
     super(props);
@@ -15,6 +13,18 @@ class PhotoViewer extends Component {
     this.togglePanelImg = this.togglePanelImg.bind(this);
     this.next = this.next.bind(this);
     this.prev = this.prev.bind(this);
+  }
+
+  componentDidMount() {
+    //preload images
+    panels.forEach(panel => {
+      const img1 = new Image();
+      img1.src = panel.before;
+      if (panel.after) {
+        const img2 = new Image();
+        img2.src = panel.after;
+      }
+    });
   }
 
   togglePanelImg() {
@@ -81,7 +91,7 @@ class PhotoViewer extends Component {
       </div>
     );
     const beforeAfter = (
-      <div className="d-flex justify-content-around p-3 w-75 mx-auto">
+      <div className="d-flex justify-content-around p-3 mx-auto">
         <button onClick={this.prev} className="flex-item btn btn-primary">
           Previous
         </button>
