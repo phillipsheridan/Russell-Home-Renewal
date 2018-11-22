@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/img/rhr-png.png";
 import Home from "./home";
-import About from "./about";
+import About from "./gallery";
 import Contact from "./contact";
 
 class Navbar extends Component {
@@ -30,7 +30,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link" to="/about">
+                <Link className="nav-link" to="/gallery">
                   Gallery
                 </Link>
               </li>

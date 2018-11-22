@@ -6,7 +6,7 @@ import Navbar from "./components/navbar";
 import Header from "./components/footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Home from "./components/home";
-import About from "./components/about";
+import Gallery from "./components/gallery";
 import Contact from "./components/contact";
 import Footer from "./components/footer";
 
@@ -15,7 +15,7 @@ ReactDOM.render(
     <>
       <Navbar />
       <Switch>
-        <Route path="/about" component={About} />
+        <Route path="/gallery" component={Gallery} />
         <Route path="/contact" component={Contact} />
         <Route path="/" component={Home} />
       </Switch>

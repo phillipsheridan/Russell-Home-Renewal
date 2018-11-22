@@ -3,7 +3,7 @@ import Navbar from "./navbar";
 import Footer from "./footer";
 import PhotoViewer from "./photo_viewer";
 
-class About extends React.Component {
+class Gallery extends React.Component {
   componentDidMount() {
     // console.log("GALLERY mounted!");
     document.getElementById("root").scrollTo(0, 0);
@@ -25,4 +25,4 @@ class About extends React.Component {
   }
 }
 
-export default About;
+export default Gallery;

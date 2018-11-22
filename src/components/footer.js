@@ -14,7 +14,7 @@ class Footer extends React.Component {
             </div>
             <div className="flex-item">
               <h6 className="text-uppercase">
-                <Link to="/about">Gallery</Link>
+                <Link to="/gallery">Gallery</Link>
               </h6>
             </div>
             <div className="flex-item">
