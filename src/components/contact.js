@@ -65,7 +65,7 @@ class Contact extends React.Component {
   onFormSubmit(ev) {
     ev.preventDefault();
     console.log(this.state.request_data);
-    fetch("http://localhost:8080/api", {
+    fetch("https://russellhomerenewal.com/api", {
       method: "POST",
       headers: {
         Accept: "application/json",
