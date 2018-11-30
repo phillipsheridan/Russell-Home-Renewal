@@ -98,3 +98,38 @@ footer {
 .my-modal {
   color: #333;
 }
+.red {
+  color: red;
+}
+.beforeAfter {
+  animation-name: beforeAfter;
+  animation-duration: 1.5s;
+}
+@keyframes beforeAfter {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.nav-item {
+  transition: hover 1s;
+  -webkit-transition: hover 1s;
+  -moz-transition: hover 1s;
+  -o-transition: hover 1s;
+}
+
+.nav-item:hover {
+  /* font-weight: bold; */
+  font-size: 1.25rem;
+}
+
+.route-selected {
+  border-bottom: 3px solid white;
+}
+
+footer a:hover {
+  text-decoration: none;
+}

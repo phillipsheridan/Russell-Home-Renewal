@@ -159,7 +159,14 @@ class Contact extends React.Component {
   errorClass(error) {
     return error.length === 0 ? "" : "is-invalid";
   }
+
   render() {
+    const asterisk = <span className="red">*</span>;
+    const nameAsterisk = this.state.nameValid ? "" : asterisk;
+    const phoneAsterisk = this.state.phoneValid ? "" : asterisk;
+    const emailAsterisk = this.state.emailValid ? "" : asterisk;
+    const projectAsterisk = this.state.projectValid ? "" : asterisk;
+    const required = this.state.formValid ? "invisible" : "";
     return (
       <>
         <Modal
@@ -185,7 +192,7 @@ class Contact extends React.Component {
                   </p>
                   <form id="emailerForm" onSubmit={this.onFormSubmit}>
                     <div className="form-group">
-                      <label>Name</label>
+                      <label>Name {nameAsterisk}</label>
                       <input
                         onChange={this.handleChange}
                         name="name"
@@ -200,7 +207,7 @@ class Contact extends React.Component {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label>Phone Number</label>
+                      <label>Phone Number{phoneAsterisk}</label>
                       <input
                         onChange={this.handleChange}
                         name="phone"
@@ -215,7 +222,7 @@ class Contact extends React.Component {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label>Email Address</label>
+                      <label>Email Address{emailAsterisk}</label>
                       <input
                         onChange={this.handleChange}
                         name="email"
@@ -230,7 +237,7 @@ class Contact extends React.Component {
                       </div>
                     </div>
                     <div className="form-group">
-                      <label>Type of Project</label>
+                      <label>Type of Project{projectAsterisk}</label>
                       <input
                         onChange={this.handleChange}
                         name="project"
@@ -261,6 +268,7 @@ class Contact extends React.Component {
                       className="btn btn-outline-light btn-block"
                       disabled={!this.state.formValid}
                     />
+                    <label className={`red mt-5 ${required}`}>* required</label>
                   </form>
                 </div>
               </div>

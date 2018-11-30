@@ -7,6 +7,18 @@ import About from "./gallery";
 import Contact from "./contact";
 
 class Navbar extends Component {
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     selected: "home"
+  //   };
+  //   this.changeSelected = this.changeSelected.bind(this);
+  // }
+  // changeSelected(text) {
+  //   this.setState({
+  //     selected: text
+  //   });
+  // }
   render() {
     return (
       <nav className="navbar navbar-expand-sm bg-dark navbar-inverse navbar-dark">
@@ -24,18 +36,48 @@ class Navbar extends Component {
           </button>
           <div className="collapse navbar-collapse" id="navbarCollapse">
             <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to="/">
+              <li
+                className="nav-item"
+                onClick={() => this.props.changeSelected("home")}
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <Link
+                  className={`nav-link d-inline-block ${
+                    this.props.selected === "home" ? "route-selected" : ""
+                  }`}
+                  to="/"
+                >
                   Home
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/gallery">
+              <li
+                className="nav-item"
+                onClick={() => this.props.changeSelected("gallery")}
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <Link
+                  className={`nav-link d-inline-block ${
+                    this.props.selected === "gallery" ? "route-selected" : ""
+                  }`}
+                  to="/gallery"
+                >
                   Gallery
                 </Link>
               </li>
-              <li className="nav-item">
-                <Link className="nav-link" to="/contact">
+              <li
+                className="nav-item"
+                onClick={() => this.props.changeSelected("contact")}
+                data-toggle="collapse"
+                data-target="#navbarCollapse"
+              >
+                <Link
+                  className={`nav-link d-inline-block ${
+                    this.props.selected === "contact" ? "route-selected" : ""
+                  }`}
+                  to="/contact"
+                >
                   Contact
                 </Link>
               </li>

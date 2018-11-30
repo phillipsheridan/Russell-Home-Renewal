@@ -7,7 +7,9 @@ class PhotoViewer extends Component {
     this.state = {
       isBefore: true,
       currentPanel: panels[0],
-      currentPanelImg: panels[0].before
+      currentPanelImg: panels[0].before,
+      transition: "beforeAfter",
+      imageHash: Date.now()
     };
 
     this.togglePanelImg = this.togglePanelImg.bind(this);
@@ -15,28 +17,19 @@ class PhotoViewer extends Component {
     this.prev = this.prev.bind(this);
   }
 
-  componentDidMount() {
-    //preload images
-    panels.forEach(panel => {
-      const img1 = new Image();
-      img1.src = panel.before;
-      if (panel.after) {
-        const img2 = new Image();
-        img2.src = panel.after;
-      }
-    });
-  }
-
   togglePanelImg() {
+    console.log(Date.now());
     if (this.state.isBefore) {
       this.setState({
         currentPanelImg: this.state.currentPanel.after,
-        isBefore: !this.state.isBefore
+        isBefore: !this.state.isBefore,
+        imageHash: Date.now()
       });
     } else {
       this.setState({
         currentPanelImg: this.state.currentPanel.before,
-        isBefore: !this.state.isBefore
+        isBefore: !this.state.isBefore,
+        imageHash: Date.now()
       });
     }
   }
@@ -80,16 +73,17 @@ class PhotoViewer extends Component {
   }
 
   render() {
-    const beforeAfterNoToggle = (
-      <div className="d-flex justify-content-around p-3 w-75 m-0 mx-auto">
-        <button onClick={this.prev} className="flex-item btn btn-primary">
-          Previous
-        </button>
-        <button onClick={this.next} className="flex-item btn btn-primary">
-          Next
-        </button>
-      </div>
+    let currentImg = (
+      <img
+        className="photoViewImg beforeAfter"
+        src={`${this.state.currentPanelImg}?${this.state.imageHash}`}
+        alt="Home Renewal"
+      />
     );
+    const isHidden = this.state.currentPanel.id.includes("Waldburg")
+      ? "invisible"
+      : "";
+
     const beforeAfter = (
       <div className="d-flex justify-content-around p-3 mx-auto">
         <button onClick={this.prev} className="flex-item btn btn-primary">
@@ -97,7 +91,7 @@ class PhotoViewer extends Component {
         </button>
         <button
           onClick={this.togglePanelImg}
-          className="flex-item btn btn-primary"
+          className={`flex-item btn btn-primary ${isHidden}`}
         >
           {this.state.isBefore ? "After" : "Before"}
         </button>
@@ -108,14 +102,8 @@ class PhotoViewer extends Component {
     );
     return (
       <div className="photoView">
-        <img
-          className="photoViewImg"
-          src={this.state.currentPanelImg}
-          alt="Home Renewal"
-        />
-        {this.state.currentPanel.id.includes("Waldburg")
-          ? beforeAfterNoToggle
-          : beforeAfter}
+        {currentImg}
+        {beforeAfter}
       </div>
     );
   }
