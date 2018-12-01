@@ -43,7 +43,7 @@ class Navbar extends Component {
                 data-target="#navbarCollapse"
               >
                 <Link
-                  className={`nav-link d-inline-block ${
+                  className={`nav-link ${
                     this.props.selected === "home" ? "route-selected" : ""
                   }`}
                   to="/"
@@ -58,7 +58,7 @@ class Navbar extends Component {
                 data-target="#navbarCollapse"
               >
                 <Link
-                  className={`nav-link d-inline-block ${
+                  className={`nav-link ${
                     this.props.selected === "gallery" ? "route-selected" : ""
                   }`}
                   to="/gallery"
@@ -73,7 +73,7 @@ class Navbar extends Component {
                 data-target="#navbarCollapse"
               >
                 <Link
-                  className={`nav-link d-inline-block ${
+                  className={`nav-link ${
                     this.props.selected === "contact" ? "route-selected" : ""
                   }`}
                   to="/contact"

@@ -2,20 +2,11 @@ import React from "react";
 import Navbar from "./navbar";
 import Header from "./header";
 import Footer from "./footer";
-import panels from "../assets/js/panels";
 
 class Home extends React.Component {
   componentDidMount() {
     // console.log("HOME mounted!");
     document.getElementById("root").scrollTo(0, 0);
-    panels.forEach(panel => {
-      const img1 = new Image();
-      img1.src = panel.before;
-      if (panel.after) {
-        const img2 = new Image();
-        img2.src = panel.after;
-      }
-    });
   }
   render() {
     return (

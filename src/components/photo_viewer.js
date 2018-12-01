@@ -8,8 +8,7 @@ class PhotoViewer extends Component {
       isBefore: true,
       currentPanel: panels[0],
       currentPanelImg: panels[0].before,
-      transition: "beforeAfter",
-      imageHash: Date.now()
+      transition: "beforeAfter"
     };
 
     this.togglePanelImg = this.togglePanelImg.bind(this);
@@ -76,7 +75,7 @@ class PhotoViewer extends Component {
     let currentImg = (
       <img
         className="photoViewImg beforeAfter"
-        src={`${this.state.currentPanelImg}?${this.state.imageHash}`}
+        src={`${this.state.currentPanelImg}`}
         alt="Home Renewal"
       />
     );

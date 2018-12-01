@@ -5,6 +5,7 @@ import { Switch, Route, BrowserRouter } from "react-router-dom";
 import Home from "./home";
 import Gallery from "./gallery";
 import Contact from "./contact";
+import panels from "../assets/js/panels";
 
 class Layout extends Component {
   constructor(props) {
@@ -24,6 +25,17 @@ class Layout extends Component {
   changeSelected(text) {
     this.setState({
       selected: text
+    });
+  }
+
+  componentDidMount() {
+    panels.forEach(panel => {
+      const img1 = new Image();
+      img1.src = panel.before;
+      if (panel.after) {
+        const img2 = new Image();
+        img2.src = panel.after;
+      }
     });
   }
 
