@@ -101,7 +101,10 @@ class PhotoViewer extends Component {
     );
     return (
       <div className="photoView">
-        {currentImg}
+        <figure>
+          {currentImg}
+          <figcaption>{this.state.isBefore ? "Before" : "After"} </figcaption>
+        </figure>
         {beforeAfter}
       </div>
     );

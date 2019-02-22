@@ -53,6 +53,7 @@ a {
 .page-footer {
   border-top: #008ed6 3px solid;
   background-color: #343a40;
+  height: 100px;
 }
 
 footer {
@@ -72,6 +73,10 @@ footer {
   height: 100%;
 } */
 
+.facebook-logo {
+  font-size: 50px;
+  height: 100px;
+}
 .nav-link {
   text-transform: uppercase;
 }
