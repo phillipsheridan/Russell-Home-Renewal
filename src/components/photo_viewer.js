@@ -103,7 +103,7 @@ class PhotoViewer extends Component {
       <div className="photoView">
         <figure>
           {currentImg}
-          <figcaption>{this.state.isBefore ? "Before" : "After"} </figcaption>
+          <figcaption>{this.state.isBefore ? "Before" : "After"}</figcaption>
         </figure>
         {beforeAfter}
       </div>
