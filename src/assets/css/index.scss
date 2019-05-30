@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 
+///// colors
+
+$primary: #303c6c;
+$primary-dark: darken($primary, 10%);
+$secondary: #d2fdff;
+$primary-complement: #f4976c;
+
 html,
 body,
 #root {
@@ -14,8 +21,8 @@ body,
 }
 
 body {
-  background: #333;
-  color: #fff;
+  background: $primary;
+  color: $secondary;
 }
 
 .content-container {
@@ -24,11 +31,17 @@ body {
 }
 
 .navbar {
-  border-bottom: #008ed6 3px solid;
+  border-bottom: $primary-complement 3px solid;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background-color: $primary-dark;
+  z-index: 9999;
+  color: $secondary !important;
 }
 
 .navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 code {
@@ -41,19 +54,21 @@ code {
 }
 
 .header {
-  background: #000000 url(../img/header-img.jpeg) 100% 100% no-repeat;
+  background: $primary url(../img/header-img.jpeg) 100% 100% no-repeat;
   height: 400px;
   background-position: center;
 }
 
 a {
-  color: #fff !important;
+  color: inherit !important;
 }
 
 .page-footer {
-  border-top: #008ed6 3px solid;
-  background-color: #343a40;
+  border-top: $primary-complement 3px solid;
+  background-color: $secondary;
   height: 100px;
+  position: absolute;
+  bottom: 0;
 }
 
 footer {
@@ -62,9 +77,16 @@ footer {
 }
 
 .footer {
+  position: absolute;
   height: 100px;
   max-width: 80% !important;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  bottom: 0;
+}
+
+.contact {
+  z-index: 9998;
+  background-color: $primary-dark;
 }
 
 /* .................HOME...................... */
@@ -128,7 +150,7 @@ footer {
 
 .nav-item:hover {
   /* font-weight: bold; */
-  font-size: 1.25rem;
+  color: $primary-complement;
 }
 
 .route-selected {

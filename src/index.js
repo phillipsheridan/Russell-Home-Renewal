@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./assets/css/index.css";
+import "./assets/css/index.scss";
 import * as serviceWorker from "./serviceWorker";
 import Navbar from "./components/navbar";
 import Header from "./components/footer";

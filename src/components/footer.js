@@ -2,7 +2,20 @@ import React from "react";
 import { Link, withRouter } from "react-router-dom";
 
 class Footer extends React.Component {
+  state = { show: false };
+  componentDidMount() {
+    window.addEventListener("resize", this.resize.bind(this));
+    this.resize();
+  }
+
+  resize() {
+    this.setState({ show: window.innerWidth <= 760 });
+  }
   render() {
+    return null;
+    if (this.state.show) {
+      return null;
+    }
     return (
       <footer className="page-footer font-small indigo">
         <div className="footer">

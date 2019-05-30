@@ -183,7 +183,7 @@ class Contact extends React.Component {
         <div className="container content-container">
           <div className="row">
             <div className="col-lg-6">
-              <div className="card bg-dark text-center card-form">
+              <div className="card contact text-center card-form">
                 <div className="card-body">
                   <h3>Get a consultation</h3>
                   <p>
@@ -273,7 +273,7 @@ class Contact extends React.Component {
                 </div>
               </div>
             </div>
-            <div className="jumbotron my-5 bg-dark m0auto">
+            <div className="jumbotron my-5 contact m0auto">
               <h5 className="display-4">Contact Us</h5>
               <hr className="my-4" />
               <p className="text-center">Email: russellhomerenewal@gmail.com</p>

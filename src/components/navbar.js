@@ -7,21 +7,17 @@ import About from "./gallery";
 import Contact from "./contact";
 
 class Navbar extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     selected: "home"
-  //   };
-  //   this.changeSelected = this.changeSelected.bind(this);
+  // componentDidMount() {
+  //   window.addEventListener("resize", this.resize.bind(this));
+  //   this.resize();
   // }
-  // changeSelected(text) {
-  //   this.setState({
-  //     selected: text
-  //   });
+
+  // resize() {
+  //   this.setState({ show: window.innerWidth <= 760 });
   // }
   render() {
     return (
-      <nav className="navbar navbar-expand-sm bg-dark navbar-inverse navbar-dark">
+      <nav className="navbar navbar-expand-sm navbar-inverse">
         <div className="container">
           <div className="navbar-brand">
             {/* RHR */}
