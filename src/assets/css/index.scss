@@ -36,7 +36,7 @@ body {
   top: 0;
   width: 100%;
   background-color: $primary-dark;
-  z-index: 9999;
+  z-index: 100;
   color: $secondary !important;
 }
 
@@ -85,7 +85,7 @@ footer {
 }
 
 .contact {
-  z-index: 9998;
+  z-index: 99;
   background-color: $primary-dark;
 }
 
