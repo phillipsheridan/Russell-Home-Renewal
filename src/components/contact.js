@@ -300,6 +300,13 @@ class Contact extends React.Component {
                   Call now
                 </a>
               </p>
+              <div className="d-flex justify-content-center align-items-center facebook-logo">
+                <div>
+                  <a href="https://www.facebook.com/Russell-Home-Renewal-1203097386513667/">
+                    <i className="fab fa-facebook" />
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ class Home extends React.Component {
     return (
       <>
         <Header />
-        <div className="container content-container">
+        <div className="container content-container content-container-home">
           <div className="row home-text">
             <div className="col-sm py-2">
               <h1 className="text-uppercase">WHO WE ARE</h1>
