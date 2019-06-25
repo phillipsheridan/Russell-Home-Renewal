@@ -26,17 +26,20 @@ body {
 }
 
 .content-container {
-  margin-top: 120px;
-  margin-bottom: 100px;
+  padding-top: 20px;
 }
 
 .content-container-home {
-  margin-top: 30px;
+  background: $primary;
+}
+
+.home-background {
+  background: $primary-dark;
 }
 
 .navbar {
   border-bottom: $primary-complement 3px solid;
-  position: absolute;
+  position: sticky;
   top: 0;
   width: 100%;
   background-color: $primary-dark;
@@ -58,9 +61,12 @@ code {
 }
 
 .header {
-  background: $primary url(../img/header-img.jpeg) 100% 100% no-repeat;
+  background: $primary url(../img/SecondFloorKit1.jpg) 100% 100% no-repeat;
   height: 400px;
   background-position: center;
+  background-size: cover;
+  flex-grow: 1;
+  position: relative;
 }
 
 a {
@@ -93,13 +99,7 @@ footer {
   background-color: $primary-dark;
 }
 
-/* .................HOME...................... */
-
-/* .home {
-  height: 100%;
-} */
-
-.facebook-logo {
+button .facebook-logo {
   font-size: 50px;
   height: 100px;
 }
@@ -164,3 +164,58 @@ footer {
 footer a:hover {
   text-decoration: none;
 }
+
+.services {
+  list-style-type: none;
+
+  li {
+    padding: 10px;
+
+    &:before {
+      margin-left: -20px;
+      margin-right: 10px;
+    }
+  }
+
+  li.paint:before {
+    content: "🖌";
+  }
+  li.tile:before {
+    content: "🔨";
+  }
+  li.wrench:before {
+    content: "🛠";
+  }
+  li.carpenter:before {
+    content: "🌲";
+  }
+  li.drywall:before {
+    content: "🏘";
+  }
+  li.gutters:before {
+    content: "💦";
+  }
+  li.exteriors:before {
+    content: "☀";
+  }
+}
+
+//// media queries!! ////////
+
+@media only screen and (min-width: 768px) {
+  .header {
+    height: 800px;
+  }
+  .content-container-home {
+    width: 400px;
+  }
+  .home-container {
+    flex-direction: row !important;
+  }
+}
+
+// @media only screen and (min-width: 1064px) {
+//   .header {
+//     height: 800px;
+//   }
+// }

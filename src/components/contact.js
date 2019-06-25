@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
 import Modal from "react-modal";
+import Button from "@material-ui/core/Button";
 
 Modal.setAppElement("#root");
 
@@ -282,28 +283,24 @@ class Contact extends React.Component {
               <p className="text-center">Phone: 912-433-6720</p>
               <hr className="my-4" />
               <p className="lead text-center">
-                <a
-                  className="btn btn-primary btn-lg"
-                  href="mailto:russellhomerenewal@gmail.com"
-                  role="button"
-                >
-                  Email now
-                </a>
+                <Button variant="contained" color="secondary">
+                  <a href="mailto:russellhomerenewal@gmail.com" role="button">
+                    Email now
+                  </a>
+                </Button>
               </p>
               <hr className="my-4" />
               <p className="lead text-center">
-                <a
-                  className="btn btn-primary btn-lg"
-                  href="tel:1-912-433-6720"
-                  role="button"
-                >
-                  Call now
-                </a>
+                <Button variant="contained" color="secondary">
+                  <a href="tel:1-912-433-6720" role="button">
+                    Call now
+                  </a>
+                </Button>
               </p>
-              <div className="d-flex justify-content-center align-items-center facebook-logo">
+              <div className="d-flex justify-content-center align-items-center facebook-logo mt-5">
                 <div>
                   <a href="https://www.facebook.com/Russell-Home-Renewal-1203097386513667/">
-                    <i className="fab fa-facebook" />
+                    <i style={{ fontSize: 60 }} className="fab fa-facebook" />
                   </a>
                 </div>
               </div>

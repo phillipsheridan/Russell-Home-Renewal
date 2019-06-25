@@ -5,11 +5,31 @@ import * as serviceWorker from "./serviceWorker";
 import Navbar from "./components/navbar";
 import Header from "./components/footer";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
-
-import Footer from "./components/footer";
+import { createMuiTheme, makeStyles, darken } from "@material-ui/core/styles";
+import { ThemeProvider } from "@material-ui/styles";
 import Layout from "./components/layout";
+import { red } from "@material-ui/core/colors";
 
-ReactDOM.render(<Layout />, document.getElementById("root"));
+const theme = createMuiTheme({
+  palette: {
+    primary: {
+      main: "#303c6c"
+    },
+    secondary: {
+      main: "#d2fdff"
+    }
+  },
+  status: {
+    danger: red
+  }
+});
+
+ReactDOM.render(
+  <ThemeProvider theme={theme}>
+    <Layout />
+  </ThemeProvider>,
+  document.getElementById("root")
+);
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.

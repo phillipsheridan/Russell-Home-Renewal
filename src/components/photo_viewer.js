@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import panels from "../assets/js/panels";
-
+import Button from "@material-ui/core/Button";
 class PhotoViewer extends Component {
   constructor(props) {
     super(props);
@@ -85,18 +85,30 @@ class PhotoViewer extends Component {
 
     const beforeAfter = (
       <div className="d-flex justify-content-around p-3 mx-auto">
-        <button onClick={this.prev} className="flex-item btn btn-primary">
+        <Button
+          variant="contained"
+          color="secondary"
+          onClick={this.prev}
+          className="flex-item"
+        >
           Previous
-        </button>
-        <button
+        </Button>
+        <Button
           onClick={this.togglePanelImg}
-          className={`flex-item btn btn-primary ${isHidden}`}
+          variant="contained"
+          color="secondary"
+          className={`flex-item ${isHidden}`}
         >
           {this.state.isBefore ? "After" : "Before"}
-        </button>
-        <button onClick={this.next} className="flex-item btn btn-primary">
+        </Button>
+        <Button
+          onClick={this.next}
+          variant="contained"
+          color="secondary"
+          className="flex-item"
+        >
           Next
-        </button>
+        </Button>
       </div>
     );
     return (

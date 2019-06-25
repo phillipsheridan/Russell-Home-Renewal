@@ -22,7 +22,7 @@ class Gallery extends React.Component {
     return (
       <>
         <div className="container content-container text-center">
-          <h1 className="m-5">Gallery</h1>
+          <h1 className="mb-5">Gallery</h1>
           <p>
             Below are some recently completed projects, if the image has a
             before/after, you can toggle to see each.
